@@ -1,0 +1,163 @@
+<html>
+	<head>
+
+		<title> Welcome to Fashionable Holiday! </title>
+
+		<meta charset="utf-8" />
+  		<title>jQuery UI Datepicker - Default functionality</title>
+  		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  		<link rel="stylesheet" href="/resources/demos/style.css" />
+  		<script>
+  		$(function() {
+    		$( "#datepicker" ).datepicker();
+  		});
+  		</script>
+
+		<style>
+
+			#title {
+				font-family: Prisma;
+				text-align: center;
+				font-size: 50px;
+				color: #6688ff;
+			}
+
+			#destination_select {
+				display: block;
+				float: center;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			#calendar {
+				font-family: Courier;
+
+			}
+
+			#box {
+				border: solid 4px black;
+				margin: auto;
+				padding: 15px;
+				width: 250px;
+				height: 250px;
+				background: #6688ff;
+				opacity: 0.85;
+				font-weight: bold;
+
+			}
+
+			#form {
+				font-family: Courier;
+				text-align: center;
+			}
+
+			#submit {
+				border: solid 4px black;
+				border-style: outset;
+				background: white;
+				text-align: center;
+				font-weight: bold; 
+			}
+
+			#submit:hover {
+				background: gray;
+			}
+
+			img {
+				width: auto;
+				height: auto;
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			margin-top: 40px;
+    			position: absolute;
+			}
+
+			body {
+				background-color: white;
+				background: url("http://wc1.smartdraw.com/examples/content/examples/06_maps/1_world_regional_maps/world_map_-_black_&_white_l.jpg");
+				background-repeat: no-repeat;
+				background-size: auto;
+				background-position: center;
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			margin-top: 15px;
+    			width: auto;
+				height: auto;
+				text-align: center;
+				opacity: 0.98;
+
+				
+			}
+
+			footer {
+				font-size: 10px;
+				font-family: courier;
+				text-align: center;
+
+			}
+
+			img {
+				max-height: 40px;
+				max-width: 40px;
+				float: center;
+				position: absolute;
+				padding: 2px;
+				margin: auto;
+			}
+
+			#using {
+				float: left;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<br>
+		<p id="title"> Fashionable  Holiday </p>
+		
+		<div id="box">
+		<form id="form" action="/homepage" method="GET" name="login">
+			<div>Where are you going? </div> <br>
+			<select id="destination_select" name="location">
+				  <option value="start">Pick your destination</option>
+				  <option value= "San_Francisco, CA">San Francisco, CA</option>
+				  <option value="Santa_Cruz, CA">Santa Cruz, CA</option>
+				  <option value="New_York_City, NY">New York City</option>
+				  <option value="Miami, FL">Miami</option>
+				  <option value="Anchorage, AK">Anchorage</option>
+			</select>
+			<br />
+
+			
+			<div>Who are you shopping for? </div> <br>
+			<select id="destination_select" name="person">
+				<option value="start">Pick your people</option>
+			  	<option value="Women">Women</option>
+			  	<option value="Men">Men</option>
+			  	<option value="Kids">Kids</option>
+			</select>
+			<p id="calendar">What day do you leave? </p><input type="text" id="datepicker" name="date"/> <br> <br>
+			<input id="submit" type="submit" value="SUBMIT">
+
+		</form>
+		</div>
+
+	</body>
+	<br> <br> <br> <br>
+	<hr>
+	<footer>
+		<div id="using"> Using: <img id="wunderground" src="http://icons-ak.wxug.com/i/misc/WeatherIPhone.png" /> </div>
+		
+  		<p>Fashionably created by: Gowri Grewal and Rebecca Bruggman c/o Hackbright Academy</p>
+ 			
+  		<a href="mailto:rebecca.bruggman@gmail.com"> Drop us a line! </a>
+		</footer>
+
+</html>

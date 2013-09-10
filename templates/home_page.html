@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title> {{city}} - fun! </title>
+
+		<style>
+			#title {
+				font-family: Prisma;
+				text-align: center;
+				font-size: 40px;
+				color: #6688ff;
+			}
+			
+			.city {
+				font-family: Courier;
+				text-align: center;
+				font-size: 20px;
+				color: #6688ff;
+			}
+
+			#clothes {
+				padding: 10px;
+				margin: auto;
+				background: white;
+
+
+			}
+
+			#reccos {
+				color: #FF00BB;
+				font-family: Courier;
+				text-align: center;
+				font-size: 18px;
+				border: solid 3px #FF00BB;
+				width: 400px;
+				margin: auto;
+				padding: 5px;
+				background: white;
+
+			}
+
+			#title_box {
+				border: solid 3px black;
+				width: 520px;
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: 20px;
+				padding: 10px;
+				background: white;
+
+			}
+
+			body {
+				background: url("http://wc1.smartdraw.com/examples/content/examples/06_maps/1_world_regional_maps/world_map_-_black_&_white_l.jpg");
+				opacity: 0.98;
+			}
+
+
+		</style>
+
+	</head>
+
+	<body>
+		<div id="title_box">
+		<div id="title"> Fashionable Holiday </div>
+		<div class="city"> to {{city}} </div> 
+		<div class="city"> average temp = {{avgHigh}} F </div>
+		</div>
+
+		<br>
+		{% if avgHigh > 75 %}
+			<p id="reccos"> Hot weather recommendations </p>
+		{% elif avgHigh > 50 %}
+			<p id="reccos"> Mild weather recommendations </p>
+		{% else %}
+			<p id="reccos"> Cold weather recommendations </p>
+		{% endif %}
+
+
+
+		<!-- {{person}}
+		{{date}}
+		{{city}}
+		{{state}} -->
+
+		<!-- {% set count = 0 %}
+		{% for item in tops.products[count].image.sizes.Large.url %}
+			{% if count < 4 %}
+
+	        	{{item}}
+	        
+		    {% endif %}
+			{% set count = count + 1 %}
+
+    	{% endfor %} -->
+
+    	<br>
+    	<table id="clothes">
+
+    	<tr> 
+		<td style="padding:8px; border: solid 1px black;"><img src="{{tops.products[0].image.sizes.Large.url}}"/> <hr> </td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{tops.products[1].image.sizes.Large.url}}"/> <hr> </td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{tops.products[2].image.sizes.Large.url}}"/> <hr> </td>
+		</tr>
+
+		<tr> 
+		<td style="padding:8px; border: solid 1px black"><img src="{{bottoms.products[0].image.sizes.Large.url}}" /><hr></td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{bottoms.products[1].image.sizes.Large.url}}" /><hr></td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{bottoms.products[2].image.sizes.Large.url}}" /><hr></td>
+		</tr>
+
+		<tr>
+		<td style="padding:8px; border: solid 1px black"><img src="{{frosting.products[0].image.sizes.Large.url}}"/></td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{frosting.products[1].image.sizes.Large.url}}"/></td>
+		<td style="padding:8px; border: solid 1px black"><img src="{{frosting.products[2].image.sizes.Large.url}}"/></td>
+		</tr>
+		</table>
+	</body>
+</html>
